@@ -1,0 +1,51 @@
+{
+  "name": "Terabox Downloader Bot",
+  "description": "Telegram bot to download Terabox videos",
+  "repository": "https://github.com/Abdul97233/TeraBox-Downloader-Bot",
+  "keywords": ["telegram", "bot", "terabox", "python"],
+  "stack": "heroku-22",
+  "env": {
+    "API_ID": {
+      "description": "Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API HASH",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token",
+      "required": true
+    },
+    "REDIS_HOST": {
+      "description": "Redis Host",
+      "required": true
+    },
+    "REDIS_PORT": {
+      "description": "Redis Port",
+      "required": true
+    },
+    "REDIS_PASSWORD": {
+      "description": "Redis Password",
+      "required": false
+    },
+    "PRIVATE_CHAT_ID": {
+      "description": "Telegram private channel/group ID",
+      "required": true
+    },
+    "COOKIE": {
+      "description": "Terabox authentication cookie",
+      "required": true
+    },
+    "ADMINS": {
+      "description": "Admin user IDs (comma separated)",
+      "required": true
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
